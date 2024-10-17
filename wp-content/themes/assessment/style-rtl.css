@@ -1,0 +1,186 @@
+/*!
+Theme Name: assessment
+Theme URI: none
+Author: Losciend Pinote
+Author URI: none
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: assessment
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/* Fonts
+	 ========================================================================== */
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/poppins-v21-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('assets/fonts/poppins-v21-latin-regular.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins-medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/poppins-v21-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('assets/fonts/poppins-v21-latin-500.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* poppins-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins-semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/poppins-v21-latin-600.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('assets/fonts/poppins-v21-latin-600.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* poppins-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins-bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/poppins-v21-latin-700.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('assets/fonts/poppins-v21-latin-700.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* poppins-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins-extrabold';
+    font-style: normal;
+    font-weight: 800;
+    src: url('assets/fonts/poppins-v21-latin-800.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('assets/fonts/poppins-v21-latin-800.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* Variables
+	 ========================================================================== */
+
+:root {
+    /* Font Size */
+    --Headline_1_ExtraBold: 2.875rem;
+    --Headline_2_ExtraBold: 2.375rem;
+    --Headline_3_ExtraBold: 1.875rem;
+    --Headline_4_Bold: 1.375rem;
+    --Headline_5_Bold: 1.25rem;
+    --Headline_6_Bold: 1rem;
+    --Headline_7_SemiBold: 0.875rem;
+    --Headline_7_Medium: 0.875rem;
+    --Paragraph_1_Regular: 1.25rem;
+    --Paragraph_2_Regular: 1rem;
+    --Paragraph_2_Bold: 1rem;
+    --Paragraph_3_Regular: 0.875rem;
+    --Paragraph_3_SemiBold: 0.875rem;
+    --Headline_8_SemiBold: 0.75rem;
+
+    /* Colors */
+    --Primary: #185CFF;
+    --Secondary: #002B4E;
+    --Tertiary: #F0F9FF;
+    --Helper_blue_1: #194060;
+    --Helper_blue_2: #607D94;
+    --Helper_blue_3: #C9DCEC;
+    --Black: #292D33;
+    --Grey: #9497A1;
+    --Background: #F1F6FA;
+    --Red_error: #C14040;
+
+
+}
+
+/* Adjstments
+	 ========================================================================== */
+body {
+    font-family: 'Poppins-medium';
+    font-optical-sizing: auto;
+    scroll-behavior: smooth;
+    background: #ffff;
+    color: var(--Black);
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+@media (max-width:991px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
+img,
+video,
+picture,
+canvas,
+svg {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--Grey);
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--Black);
+    transition: 0.3s ease-in-out;
+}

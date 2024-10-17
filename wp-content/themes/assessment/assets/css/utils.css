@@ -1,0 +1,91 @@
+.Headline_8_Bold {
+    font-family: 'Poppins-Bold';
+    font-size: var(--Headline_8_Bold);
+    color: var(--Black);
+    line-height: 1.5rem;
+}
+
+.Headline_3_ExtraBold {
+    font-family: 'Poppins-ExtraBold';
+    font-size: var(--Headline_3_ExtraBold);
+    color: var(--White);
+    line-height: 2.5rem;
+}
+
+.Headline_7_SemiBold {
+    font-family: 'Poppins-SemiBold';
+    font-size: var(--Headline_7_SemiBold);
+    color: var(--Helper_blue_1);
+    line-height: 1.5rem;
+}
+
+.Paragraph_3_Regular {
+    font-family: 'Poppins-Regular';
+    font-size: var(--Paragraph_3_Regular);
+    color: var(--Grey);
+    line-height: 1.5rem;
+}
+
+.default--btn {
+    border-radius: 0.375rem;
+    background: blue;
+    color: #FFFFFF;
+    padding: 0.625em 0.875em;
+}
+
+.text--white {
+    color: #FFFFFF;
+}
+
+.page--header {
+    margin-bottom: 1.875rem;
+}
+
+.section {
+    margin-bottom: 3.125rem;
+}
+
+/* 2xs */
+@media (min-width: 375px) {}
+
+/* xs */
+@media (min-width: 475px) {}
+
+/* sm */
+@media (min-width: 640px) {}
+
+/* md */
+@media (min-width: 768px) {
+    .Headline_6_Bold {
+        font-family: 'Poppins-Bold';
+        font-size: var(--Headline_6_Bold);
+        color: var(--Black);
+        line-height: 1.5rem;
+    }
+
+    .Headline_1_ExtraBold {
+        font-family: 'Poppins-ExtraBold';
+        font-size: var(--Headline_1_ExtraBold);
+        color: var(--White);
+        line-height: 3.75rem;
+    }
+}
+
+/*lg*/
+@media (min-width: 992px) {
+    .section {
+        margin-bottom: 5.625rem;
+    }
+}
+
+/*lg */
+@media (min-width: 1024px) {}
+
+/* xl */
+@media (min-width: 1200px) {}
+
+/* 2xl */
+@media (min-width: 1280px) {}
+
+/* 3xl */
+@media (min-width: 1536px) {}
